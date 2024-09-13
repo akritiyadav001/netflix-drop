@@ -1,7 +1,9 @@
+//import Login from './components/login.js';
+import Body from './components/body.js';
 function App() {
   return (
-    <div className="bg-red-200">
-        <h1>App comp</h1>
+      <div >
+        <Body/>
     </div>
   );
 }
