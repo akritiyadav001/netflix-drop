@@ -4,6 +4,12 @@
 - configured TailwindCSS
 - Login form
 - Sign Up form
+- Form Validation
+- useRef Hook
+- Firebase setup
+- Deployed  the app on firebase
+- Implement Sign up user API
+- Created Redux Store with userSlice
 
 # Features 
 
