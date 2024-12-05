@@ -15,6 +15,7 @@
 - Unsubscribed to the onAuthStateChanged callback
 - Registered for TMDB API & created an APP on TMDB website & get access token
 - Get data from TMDB now playing movies list API
+- Set the browse page background video
 
 # Features 
 

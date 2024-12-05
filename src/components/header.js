@@ -48,7 +48,7 @@ const Header = () =>{
     return(
         <div> 
             <div className="px-8 py-2 bg-gradient-to-b from-black flex items-center justify-between">
-              <img src={logo} className='w-40 h-30' alt='netflixlogo' />
+              <img src={logo} className='w-40 h-20' alt='netflixlogo' />
                 { user &&  <div className=' bg-pink flex justify-around'>
                       <img src={userlogo} className='w-15 h-10' alt='userlogo' /> 
                     {/*  <div>{user.email}</div>  */}

@@ -7,7 +7,6 @@ const Browse = () =>{
     return(
         <div>
                     <Header/>
-                    <h3 className="text-center">Browse</h3>
                      <MainContainer/>
                     <SecondaryContainer/> 
             
