@@ -4,17 +4,14 @@ import {useState, useRef} from 'react';
 import CheckValidData from '../utils/validate.js';
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile   } from "firebase/auth";
 import {auth} from '../utils/firebase.js';
-import { useNavigate } from 'react-router-dom';
-/* import userlogo from './images/netflixuserlogo.jpg'; */
 import {useDispatch} from 'react-redux';
 import {addUser} from '../utils/userSlice.js';
+import userlogo from './images/netflixuserlogo.jpg'; 
 
 
 const Login = () =>{
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMessage, setErrorMessage] = useState(null);
-   
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const displayName = useRef(null);
@@ -42,18 +39,16 @@ const Login = () =>{
 
             // update profile logic is here
              updateProfile(user, {
-                displayName: displayName.current.value , photoURL: "https://media.licdn.com/dms/image/v2/D4D03AQGKv8zFvkU4sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722194634584?e=1737590400&v=beta&t=G-vGCPDc9Tn-RekF1ebo_us3Ta1C8hNEuReCs-xTgpM"
+                displayName: displayName.current.value , photoURL: userlogo 
               }).then(() => {
                 const {uid, email, displayName} = auth.currentUser;
                 dispatch(addUser({uid:uid,email:email,displayName: displayName}))
-                navigate("/browse")
+                console.log("I am the user name " + displayName);
               }).catch((error) => {
                 // An error occurred
                 setErrorMessage(error.message);
               }); 
-          /*   console.log(user);
-            console.log(displayName.current.value); */
-            // ...
+          
             })
             .catch((error) => {
             const errorCode = error.code;
@@ -67,7 +62,6 @@ const Login = () =>{
             .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            navigate("/browse")
             // ...
             })
             .catch((error) => {

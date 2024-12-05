@@ -10,6 +10,11 @@
 - Deployed  the app on firebase
 - Implement Sign up user API
 - Created Redux Store with userSlice
+- BugFix: SignUp user displayName but not profile picture Update
+- Bugfix: If the user is not logged in Redirect /browse to login Page but not working vice versa vice-versa
+- Unsubscribed to the onAuthStateChanged callback
+- Registered for TMDB API & created an APP on TMDB website & get access token
+- Get data from TMDB now playing movies list API
 
 # Features 
 

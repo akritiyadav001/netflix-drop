@@ -1,17 +1,26 @@
 import Header from "./header";
-import { useSelector } from 'react-redux'; 
-
-
-
+import useNowPlayingMovies from '../customHooks/usePlayMovies';
+import MainContainer from "./mainContainer";
+import SecondaryContainer from "./secondaryContainer";
 const Browse = () =>{
-
+    useNowPlayingMovies()
     return(
         <div>
                     <Header/>
                     <h3 className="text-center">Browse</h3>
-                    {/* <h4>{user.photoURL}</h4> */}
-                
-        </div>
-    )
+                     <MainContainer/>
+                    <SecondaryContainer/> 
+            
+                    {/* 
+                            MainContainer
+                                - VideoBackGround
+                                - VideoTitle
+                            SecondaryContainer
+                                - MovieList * n
+                                - Cards * n
+                        */}
+                    
+            </div>
+        )
 }
 export default Browse;
