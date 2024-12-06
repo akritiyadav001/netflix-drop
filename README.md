@@ -16,6 +16,10 @@
 - Registered for TMDB API & created an APP on TMDB website & get access token
 - Get data from TMDB now playing movies list API
 - Set the browse page background video
+- Now we will create the secondary container
+- Updated the nowplaying movies in the  movies list
+- Put all nowplaying movies data in the redux store by creating the new custom hook called useNowPlayingMovies
+- Did same for popular movies as well
 
 # Features 
 
