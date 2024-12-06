@@ -20,6 +20,7 @@
 - Updated the nowplaying movies in the  movies list
 - Put all nowplaying movies data in the redux store by creating the new custom hook called useNowPlayingMovies
 - Did same for popular movies as well
+-Completed all types of movie list in the secondary container fetched all apis from TMDB
 
 # Features 
 
